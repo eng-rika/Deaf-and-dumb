@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التعرف على إشارات الصم والبكم</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        #video-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        video, canvas {
+            width: 640px;
+            height: 480px;
+            border: 2px solid #ccc;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>التعرف على إشارات الصم والبكم</h1>
+    <div id="video-container">
+        <video id="video" autoplay></video>
+        <canvas id="output"></canvas>
+    </div>
+    <button onclick="startRecognition()">ابدأ التعرف</button>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
